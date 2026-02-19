@@ -11126,25 +11126,28 @@
   user-select: none;
 }*/
 
-.before-after-wrapper {
+/* Before / After Wrapper */
+.before-after-wrapper, .beer-slider {
     position: relative;
     width: 100%;
     overflow: hidden;
     border-radius: 6px;
 }
 
-/* BEFORE IMAGE (full width behind) */
-.img-before {
+/* BEFORE IMAGE */
+.img-before, .beer-slider img {
     width: 100%;
     display: block;
+    transition: none; /* remove any hover transition */
+    filter: none !important; /* remove brightness/contrast/darken effects */
 }
 
-/* AFTER IMAGE wrapper controls visible portion */
+/* AFTER IMAGE wrapper */
 .img-after-wrapper {
     position: absolute;
     top: 0;
-    left: 0;      /* start from left so after image covers part of before image */
-    width: 50%;    /* 50% initially visible */
+    left: 0;
+    width: 50%; /* initially half visible */
     height: 100%;
     overflow: hidden;
     transition: width 0.5s ease;
@@ -11157,25 +11160,46 @@
     height: 100%;
     display: block;
     object-fit: cover;
+    transition: none; /* remove hover transition */
+    filter: none !important; /* no dark/light on hover */
 }
 
-/* Buttons */
-.ba-btn {
+/* Buttons at bottom corners */
+.before-after-buttons {
     position: absolute;
-    bottom: 12px;
-    padding: 6px 14px;
-    font-size: 13px;
-    background: rgba(0,0,0,0.7);
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: auto;
+    z-index: 10;
+}
+
+.before-after-buttons button {
+    padding: 6px 12px;
+    background-color: rgba(0,0,0,0.6);
     color: #fff;
     border: none;
+    border-radius: 4px;
+    font-size: 14px;
     cursor: pointer;
-    border-radius: 3px;
-    z-index: 5;
+    transition: background 0.3s;
+}
+
+.before-after-buttons button:hover {
+    background-color: rgba(0,0,0,0.8);
 }
 
 .before-btn { left: 12px; }
 .after-btn { right: 12px; }
 
+/* Remove overlays completely */
+.overlay-box {
+    display: none !important;
+}
 
-
-
+/* Disable any hover image filters globally */
+.project-block-two .image img:hover {
+    filter: none !important;
+}
