@@ -11127,44 +11127,30 @@
 }*/
 
 /* Before / After Wrapper */
-.before-after-wrapper, .beer-slider {
+.beer-slider-wrapper {
     position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+/* IMPORTANT: Let BeerSlider control reveal */
+.beer-slider {
     width: 100%;
     overflow: hidden;
     border-radius: 6px;
+    touch-action: pan-y; /* Fix mobile drag */
 }
 
-/* BEFORE IMAGE */
-.img-before, .beer-slider img {
+/* IMAGES */
+.beer-slider img,
+.beer-slider .beer-reveal img {
     width: 100%;
     display: block;
-    transition: none; /* remove any hover transition */
-    filter: none !important; /* remove brightness/contrast/darken effects */
+    filter: none !important;
+    transition: none !important;
 }
 
-/* AFTER IMAGE wrapper */
-.img-after-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%; /* initially half visible */
-    height: 100%;
-    overflow: hidden;
-    transition: width 0.5s ease;
-    z-index: 2;
-}
-
-/* AFTER IMAGE inside wrapper */
-.img-after {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    transition: none; /* remove hover transition */
-    filter: none !important; /* no dark/light on hover */
-}
-
-/* Buttons at bottom corners */
+/* BUTTONS */
 .before-after-buttons {
     position: absolute;
     bottom: 10px;
@@ -11172,7 +11158,6 @@
     right: 10px;
     display: flex;
     justify-content: space-between;
-    pointer-events: auto;
     z-index: 10;
 }
 
@@ -11184,22 +11169,17 @@
     border-radius: 4px;
     font-size: 14px;
     cursor: pointer;
-    transition: background 0.3s;
 }
 
 .before-after-buttons button:hover {
     background-color: rgba(0,0,0,0.8);
 }
 
-.before-btn { left: 12px; }
-.after-btn { right: 12px; }
-
-/* Remove overlays completely */
+/* REMOVE OVERLAY */
 .overlay-box {
     display: none !important;
 }
 
-/* Disable any hover image filters globally */
 .project-block-two .image img:hover {
     filter: none !important;
 }
