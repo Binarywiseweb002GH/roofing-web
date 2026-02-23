@@ -11128,58 +11128,56 @@
 
 /* Before / After Wrapper */
 .beer-slider-wrapper {
-    position: relative;
-    width: 100%;
-    margin-bottom: 30px;
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
 }
 
-/* IMPORTANT: Let BeerSlider control reveal */
 .beer-slider {
-    width: 100%;
-    overflow: hidden;
-    border-radius: 6px;
-    touch-action: pan-y; /* Fix mobile drag */
+  width: 100%;
+  overflow: hidden;
+  border-radius: 6px;
 }
 
 /* IMAGES */
 .beer-slider img,
 .beer-slider .beer-reveal img {
-    width: 100%;
-    display: block;
-    filter: none !important;
-    transition: none !important;
+  width: 100%;
+  display: block;
+  filter: none !important;
+  transition: none !important;
 }
 
 /* BUTTONS */
 .before-after-buttons {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-    display: flex;
-    justify-content: space-between;
-    z-index: 10;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
 }
 
 .before-after-buttons button {
-    padding: 6px 12px;
-    background-color: rgba(0,0,0,0.6);
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    font-size: 14px;
-    cursor: pointer;
+  padding: 6px 12px;
+  background-color: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 .before-after-buttons button:hover {
-    background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,0.8);
 }
 
 /* REMOVE OVERLAY */
 .overlay-box {
-    display: none !important;
+  display: none !important;
 }
 
 .project-block-two .image img:hover {
-    filter: none !important;
+  filter: none !important;
 }

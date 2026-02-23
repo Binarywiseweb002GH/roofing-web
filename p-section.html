@@ -217,9 +217,7 @@
 	<!-- END sidebar widget item -->
 	
 	
-	<!-- Project Section Two -->
-<!-- Project Section Two -->
-<section class="project-section-two">
+	<section class="project-section-two">
     <div class="auto-container">
         <div class="sec-title centered">
             <div class="title">...Our Project...</div>
@@ -227,7 +225,8 @@
         </div>
         <div class="row clearfix">
 
-             <div class="project-block-two col-lg-4 col-md-6 col-sm-12">
+            <!-- Project Block 1 -->
+            <div class="project-block-two col-lg-4 col-md-6 col-sm-12">
                 <div class="inner-box">
                     <div class="image">
                         <div class="beer-slider-wrapper">
@@ -237,8 +236,6 @@
                                     <img src="images/gallery/after2.jpg" alt="After">
                                 </div>
                             </div>
-
-                            <!-- Buttons -->
                             <div class="before-after-buttons">
                                 <button class="before-btn">Before</button>
                                 <button class="after-btn">After</button>
@@ -247,31 +244,6 @@
                     </div>
                 </div>
             </div>
-
-            
-            <div class="project-block-two col-lg-8 col-md-12 col-sm-12">
-                <div class="inner-box">
-                    <div class="image">
-                        <div class="beer-slider-wrapper">
-                            <div class="beer-slider" data-start="50">
-                                <img src="images/gallery/before3.jpg" alt="Before" class="beer-before">
-                                <div class="beer-reveal">
-                                    <img src="images/gallery/after3.jpg" alt="After">
-                                </div>
-                            </div>
-
-                            <!-- Buttons -->
-                            <div class="before-after-buttons">
-                                <button class="before-btn">Before</button>
-                                <button class="after-btn">After</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project Block 1 -->
-           
 
             <!-- Project Block 2 -->
             <div class="project-block-two col-lg-8 col-md-12 col-sm-12">
@@ -284,8 +256,6 @@
                                     <img src="images/gallery/after3.jpg" alt="After">
                                 </div>
                             </div>
-
-                            <!-- Buttons -->
                             <div class="before-after-buttons">
                                 <button class="before-btn">Before</button>
                                 <button class="after-btn">After</button>
@@ -296,18 +266,16 @@
             </div>
 
             <!-- Project Block 3 -->
-            <div class="project-block-two col-lg-4 col-md-6 col-sm-12">
+            <div class="project-block-two col-lg-8 col-md-12 col-sm-12">
                 <div class="inner-box">
                     <div class="image">
                         <div class="beer-slider-wrapper">
                             <div class="beer-slider" data-start="50">
-                                <img src="images/gallery/before2.jpg" alt="Before" class="beer-before">
+                                <img src="images/gallery/before3.jpg" alt="Before" class="beer-before">
                                 <div class="beer-reveal">
-                                    <img src="images/gallery/after2.jpg" alt="After">
+                                    <img src="images/gallery/after3.jpg" alt="After">
                                 </div>
                             </div>
-
-                            <!-- Buttons -->
                             <div class="before-after-buttons">
                                 <button class="before-btn">Before</button>
                                 <button class="after-btn">After</button>
@@ -328,8 +296,6 @@
                                     <img src="images/gallery/after2.jpg" alt="After">
                                 </div>
                             </div>
-
-                            <!-- Buttons -->
                             <div class="before-after-buttons">
                                 <button class="before-btn">Before</button>
                                 <button class="after-btn">After</button>
@@ -350,8 +316,26 @@
                                     <img src="images/gallery/after2.jpg" alt="After">
                                 </div>
                             </div>
+                            <div class="before-after-buttons">
+                                <button class="before-btn">Before</button>
+                                <button class="after-btn">After</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                            <!-- Buttons -->
+            <!-- Project Block 6 -->
+            <div class="project-block-two col-lg-4 col-md-6 col-sm-12">
+                <div class="inner-box">
+                    <div class="image">
+                        <div class="beer-slider-wrapper">
+                            <div class="beer-slider" data-start="50">
+                                <img src="images/gallery/before2.jpg" alt="Before" class="beer-before">
+                                <div class="beer-reveal">
+                                    <img src="images/gallery/after2.jpg" alt="After">
+                                </div>
+                            </div>
                             <div class="before-after-buttons">
                                 <button class="before-btn">Before</button>
                                 <button class="after-btn">After</button>
@@ -403,57 +387,49 @@
 <script src="js/nav-tool.js"></script>
 <script src="js/jquery-ui.js"></script>
 
-<!-- BeerSlider -->
-<script src="https://unpkg.com/beerslider/dist/BeerSlider.js"></script>
+
 
 <!-- Custom Scripts -->
 <script src="js/script.js"></script>
 <script src="js/color-settings.js"></script>
 
 
+<script src="https://unpkg.com/beerslider/dist/BeerSlider.js"></script>
+
 <script>
 window.addEventListener("load", function () {
+  document.querySelectorAll('.beer-slider-wrapper').forEach(wrapper => {
+    const slider = wrapper.querySelector('.beer-slider');
+    const reveal = slider.querySelector('.beer-reveal');
+    const btnBefore = wrapper.querySelector('.before-btn');
+    const btnAfter = wrapper.querySelector('.after-btn');
 
-    /* Initialize ALL Beer Sliders */
-    document.querySelectorAll('.beer-slider-wrapper').forEach(function (wrapper) {
+    if (!slider || !reveal) return;
 
-        const slider = wrapper.querySelector('.beer-slider');
-        const btnBefore = wrapper.querySelector('.before-btn');
-        const btnAfter  = wrapper.querySelector('.after-btn');
-
-        if (!slider) return;
-
-        /* Initialize BeerSlider */
-        const instance = new BeerSlider(slider, {
-            start: slider.dataset.start ? parseInt(slider.dataset.start) : 50
-        });
-
-        /* Get reveal element AFTER initialization */
-        const reveal = slider.querySelector('.beer-reveal');
-
-        /* ---- BEFORE BUTTON ---- */
-        if (btnBefore && reveal) {
-            btnBefore.addEventListener('click', function (e) {
-                e.preventDefault();
-                reveal.style.transition = "width 0.5s ease";
-                reveal.style.width = "0%";
-            });
-        }
-
-        /* ---- AFTER BUTTON ---- */
-        if (btnAfter && reveal) {
-            btnAfter.addEventListener('click', function (e) {
-                e.preventDefault();
-                reveal.style.transition = "width 0.5s ease";
-                reveal.style.width = "100%";
-            });
-        }
-
+    // Initialize BeerSlider after images load
+    const imgs = slider.querySelectorAll('img');
+    let loaded = 0;
+    imgs.forEach(img => {
+      if (img.complete) loaded++;
+      else img.onload = () => { loaded++; if (loaded === imgs.length) new BeerSlider(slider, { start: 50 }); }
     });
+    if (loaded === imgs.length) new BeerSlider(slider, { start: 50 });
 
+    // Smooth transition for mobile
+    reveal.style.transition = 'width 0.5s ease';
+
+    // Buttons fix for iOS
+    btnBefore.addEventListener('click', () => {
+      reveal.style.width = '0%';
+      setTimeout(() => { new BeerSlider(slider, { start: 0 }); }, 50); // force update
+    });
+    btnAfter.addEventListener('click', () => {
+      reveal.style.width = '100%';
+      setTimeout(() => { new BeerSlider(slider, { start: 100 }); }, 50); // force update
+    });
+  });
 });
 </script>
-
 <!--<script>
 $(window).on('load', function () {
 

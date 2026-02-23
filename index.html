@@ -990,46 +990,38 @@
 <script src="js/color-settings.js"></script>
 
 
-<<script>
+<script>
 window.addEventListener("load", function () {
+  document.querySelectorAll('.beer-slider-wrapper').forEach(wrapper => {
+    const slider = wrapper.querySelector('.beer-slider');
+    const reveal = slider.querySelector('.beer-reveal');
+    const btnBefore = wrapper.querySelector('.before-btn');
+    const btnAfter = wrapper.querySelector('.after-btn');
 
-    /* Initialize ALL Beer Sliders */
-    document.querySelectorAll('.beer-slider-wrapper').forEach(function (wrapper) {
+    if (!slider || !reveal) return;
 
-        const slider = wrapper.querySelector('.beer-slider');
-        const btnBefore = wrapper.querySelector('.before-btn');
-        const btnAfter  = wrapper.querySelector('.after-btn');
-
-        if (!slider) return;
-
-        /* Initialize BeerSlider */
-        const instance = new BeerSlider(slider, {
-            start: slider.dataset.start ? parseInt(slider.dataset.start) : 50
-        });
-
-        /* Get reveal element AFTER initialization */
-        const reveal = slider.querySelector('.beer-reveal');
-
-        /* ---- BEFORE BUTTON ---- */
-        if (btnBefore && reveal) {
-            btnBefore.addEventListener('click', function (e) {
-                e.preventDefault();
-                reveal.style.transition = "width 0.5s ease";
-                reveal.style.width = "0%";
-            });
-        }
-
-        /* ---- AFTER BUTTON ---- */
-        if (btnAfter && reveal) {
-            btnAfter.addEventListener('click', function (e) {
-                e.preventDefault();
-                reveal.style.transition = "width 0.5s ease";
-                reveal.style.width = "100%";
-            });
-        }
-
+    // Initialize BeerSlider after images load
+    const imgs = slider.querySelectorAll('img');
+    let loaded = 0;
+    imgs.forEach(img => {
+      if (img.complete) loaded++;
+      else img.onload = () => { loaded++; if (loaded === imgs.length) new BeerSlider(slider, { start: 50 }); }
     });
+    if (loaded === imgs.length) new BeerSlider(slider, { start: 50 });
 
+    // Smooth transition for mobile
+    reveal.style.transition = 'width 0.5s ease';
+
+    // Buttons fix for iOS
+    btnBefore.addEventListener('click', () => {
+      reveal.style.width = '0%';
+      setTimeout(() => { new BeerSlider(slider, { start: 0 }); }, 50); // force update
+    });
+    btnAfter.addEventListener('click', () => {
+      reveal.style.width = '100%';
+      setTimeout(() => { new BeerSlider(slider, { start: 100 }); }, 50); // force update
+    });
+  });
 });
 </script>
 
