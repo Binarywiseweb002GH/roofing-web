@@ -1033,6 +1033,12 @@ document.querySelectorAll('.juxtapose').forEach(slider => {
     slider.querySelector('.jx-slider-mask').style.width = percent + '%';
   });
 });
+// Disable mouse auto movement
+document.querySelectorAll('.juxtapose').forEach(function(slider) {
+  // Remove mousemove listener added by Juxtapose
+  slider.onmousemove = null;
+  slider.ontouchmove = null;
+});
 </script>
 
 
