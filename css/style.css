@@ -11174,10 +11174,95 @@
 }
 
 /* REMOVE OVERLAY */
-.overlay-box {
+
+/* Remove Juxtapose credit text */
+/* ------------------------------ */
+/* Remove Juxtapose credit text */
+/* ------------------------------ */
+.jx-credit,
+.jx-knightlab {
   display: none !important;
 }
 
-.project-block-two .image img:hover {
+/* ------------------------------ */
+/* Page container spacing */
+/* ------------------------------ */
+.project-section-two .auto-container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 1200px) {
+  .project-section-two .auto-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+/* ------------------------------ */
+/* Section padding and image spacing */
+/* ------------------------------ */
+.project-section-two {
+  padding: 80px 0;
+}
+
+.project-block-two .image {
+  margin-bottom: 30px;
+}
+
+/* ------------------------------ */
+/* Juxtapose container full width */
+/* ------------------------------ */
+.juxtapose {
+  width: 100%;
+  overflow: visible; /* allow handle to reach edges */
+}
+
+/* ------------------------------ */
+/* Remove Juxtapose dark overlay and preserve color */
+/* ------------------------------ */
+.juxtapose .jx-slider-mask {
+  background: transparent !important;  /* Remove dark mask */
+  transition: none !important;         /* Prevent slider auto jump */
+}
+
+/* Images crisp, full color, no filter */
+.juxtapose img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  image-rendering: auto;
   filter: none !important;
+  transition: none !important;
+}
+
+/* ------------------------------ */
+/* Slider handle styling */
+/* ------------------------------ */
+.juxtapose .jx-slider-handle {
+  background-color: #fff !important; /* handle color */
+  border: 2px solid #000;           /* handle border */
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  cursor: grab;
+  transition: none !important;       /* prevent jump on click */
+}
+
+/* Handle on hover */
+.juxtapose .jx-slider-handle:hover {
+  background-color: #f1f1f1 !important;
+}
+
+/* ------------------------------ */
+/* Remove Knightlab branding fonts (just in case) */
+/* ------------------------------ */
+.jx-knightlab {
+  font-family: inherit !important;
+}
+
+/* ------------------------------ */
+/* Optional: responsive image adjustments */
+/* ------------------------------ */
+@media (max-width: 767px) {
+  .juxtapose {
+    height: auto;
+  }
 }

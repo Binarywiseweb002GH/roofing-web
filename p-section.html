@@ -1,537 +1,175 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Young Gunns Roofing</title>
-<!-- Stylesheets -->
-<link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<link href="css/responsive.css" rel="stylesheet">
+<title>Young Gunns Roofing – Projects</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="https://unpkg.com/beerslider/dist/BeerSlider.css">
+<!-- Bootstrap (ඔබගේ layout එකට) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 
+<!-- Juxtapose Slider CSS -->
+<link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
 
-
-<!-- Color Switcher Mockup -->
-<link href="css/color-switcher-design.css" rel="stylesheet">
-
-<!-- Color Themes -->
-<link id="theme-color-file" href="css/color-themes/default-color.css" rel="stylesheet">
-
-<link rel="shortcut icon" href="images/fav.png" type="image/x-icon">
-<link rel="icon" href="images/fav.png" type="image/x-icon">
-
-<!-- Responsive -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <style>
-	.beer-slider-wrapper {
+/* keep your project look */
+.project-section-two {
+  padding: 80px 0;
+}
+
+.project-block-two .image {
+  margin-bottom: 30px;
+}
+
+.juxtapose {
   width: 100%;
-  position: relative;
 }
-.before-after-buttons {
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-  right: 15px;
-  display: flex;
-  justify-content: space-between;
-}
-.before-after-buttons button {
-  padding: 8px 15px;
-  border: none;
-  background-color: rgba(0,0,0,0.6);
-  color: #fff;
-  cursor: pointer;
-  border-radius: 4px;
-  font-size: 14px;
-}
-.before-after-buttons button:hover {
-  background-color: rgba(0,0,0,0.8);
+
+.jx-knightlab {
+  font-family: inherit;
 }
 </style>
 </head>
 
 <body>
-<div class="cursor"></div>
-<div class="page-wrapper">
- 	
-    
- 	
- 	<!-- Main Header / Header Style Five -->
-    <header class="main-header header-style-seven">
-    	
-        <!-- Header Lower -->
-        <div class="header-lower">
-            
-			<div class="auto-container">
-				<div class="inner-container d-flex justify-content-between align-items-center flex-wrap">
-					
-					<div class="pull-left logo-box">
-						<div class="logo"><a href="index.html"><img src="images/logo.png" alt="" title="Roonix Roofing"></a></div>
-					</div>
-					<div class="nav-outer clearfix">
-						
-						<!-- Mobile Navigation Toggler -->
-						<div class="mobile-nav-toggler"><span class="icon flaticon-menu"></span></div>
-						<!-- Main Menu -->
-						<nav class="main-menu show navbar-expand-md">
-							<div class="navbar-header">
-								<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-								</button>
-							</div>
-							
-							<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
-								<ul class="navigation clearfix">
-									
-										<li><a href="index.html">Home</a></li>
-										<li><a href="about.html">About Us</a></li>
-										<li><a href="services.html">Our Services</a></li>
-										<li><a href="projects.html">Our Projects</a></li>
-										<li><a href="faq.html">FAQ</a></li>
-										<li><a href="contact.html">Contact us</a></li>
-								</ul>
-							</div>
-							
-						</nav>
-						<!-- Main Menu End-->
-						
-					</div>
-					
-					<!-- Outer Box -->
-					<div class="outer-box clearfix">
-						<div class="button-box text-center">
-							<a href="contact.html" class="theme-btn btn-style-two clearfix">
-								<span class="btn-wrap">
-									<span class="text-one">Get in touch</span>
-									<span class="text-two">Get in touch</span>
-								</span>
-							</a>
-						</div>
-					</div>
-					<!-- End Outer Box -->
-					
-				</div>
-				
-			</div>
-        </div>
-        <!-- End Header Lower -->
-        
-		<!-- Sticky Header  -->
-        <div class="sticky-header">
-            <div class="auto-container clearfix">
-                <!-- Logo -->
-                <div class="logo pull-left">
-                    <a href="index.html" title=""><img src="images/logo.png" alt="" title=""></a>
-                </div>
-				
-                <!--Right Col-->
-                <div class="pull-right">
-                    <!-- Main Menu -->
-                    <nav class="main-menu">
-                        <!--Keep This Empty / Menu will come through Javascript-->
-                    </nav><!-- Main Menu End-->
-					
-					<div class="mobile-nav-toggler"><span class="icon flaticon-menu"></span></div>
-					
-                </div>
-            </div>
-        </div><!-- End Sticky Menu -->
-    
-		<!-- Mobile Menu  -->
-        <div class="mobile-menu">
-            <div class="menu-backdrop"></div>
-            <div class="close-btn"><span class="icon flaticon-multiply"></span></div>
-            <nav class="menu-box">
-                <div class="nav-logo"><a href="index.html"><img src="images/logo.png" alt="Roonix" title=""></a></div>
-				<!-- Search -->
-				<div class="search-box">
-					<form method="post" action="contact.html">
-						<div class="form-group">
-							<input type="search" name="search-field" value="" placeholder="SEARCH HERE" required>
-							<button type="submit"><span class="icon flaticon-search-1"></span></button>
-						</div>
-					</form>
-				</div>
-                <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
-            </nav>
-        </div>
-		<!-- End Mobile Menu -->
-	
-    </header>
-    <!-- End Main Header -->
-	
-	<!-- Sidebar Cart Item -->
-	<div class="xs-sidebar-group info-group">
-		<div class="xs-overlay xs-bg-black"></div>
-		<div class="xs-sidebar-widget">
-			<div class="sidebar-widget-container">
-				<div class="widget-heading">
-					<a href="#" class="close-side-widget">
-						X
-					</a>
-				</div>
-				<div class="sidebar-textwidget">
-					
-					<!-- Sidebar Info Content -->
-					<div class="sidebar-info-contents">
-						<div class="content-inner">
-							<div class="logo">
-								<a href="index.html"><img src="images/siderlogo.png" alt="" /></a>
-							</div>
-							<div class="content-box">
-								<h5>About Us</h5>
-								<p class="text">Young Gunns Roofing has been providing reliable, high-quality roofing solutions for over 30 years. From installations to maintenance, we ensure your home or business is protected with durable and professional workmanship.</p>
-								<a href="contact.html" class="theme-btn btn-style-one"><span class="txt">Consultation</span></a>
-							</div>
-							<div class="contact-info">
-								<h5>Contact Info</h5>
-								<ul class="list-style-one">
-									<li><span class="icon fa fa-location-arrow"></span>Chicago 12, Melborne City, USA</li>
-									<li><span class="icon fa fa-phone"></span>(111) 111-111-1111</li>
-									<li><span class="icon fa fa-envelope"></span>roonix@gmail.com</li>
-									<li><span class="icon fa fa-clock-o"></span>Week Days: 09.00 to 18.00 Sunday: Closed</li>
-								</ul>
-							</div>
-							<!-- Social Box -->
-							<ul class="social-box">
-								<li><a href="#0" class="fa fa-facebook-f"></a></li>
-								<li><a href="#0" class="fa fa-twitter"></a></li>
-								<li><a href="#0" class="fa fa-dribbble"></a></li>
-								<li><a href="#0" class="fa fa-linkedin"></a></li>
-							</ul>
-						</div>
-					</div>
-					
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- END sidebar widget item -->
-	
-	
-	<section class="project-section-two">
+
+<section class="project-section-two">
     <div class="auto-container">
         <div class="sec-title centered">
             <div class="title">...Our Project...</div>
             <h2>Our Latest Projects</h2>
         </div>
-        <div class="row clearfix">
 
-            <!-- Project Block 1 -->
-            <div class="project-block-two col-lg-4 col-md-6 col-sm-12">
-                <div class="inner-box">
-                    <div class="image">
-                        <div class="beer-slider-wrapper">
-                            <div class="beer-slider" data-start="50">
-                                <img src="images/gallery/before2.jpg" alt="Before" class="beer-before">
-                                <div class="beer-reveal">
-                                    <img src="images/gallery/after2.jpg" alt="After">
-                                </div>
-                            </div>
-                            <div class="before-after-buttons">
-                                <button class="before-btn">Before</button>
-                                <button class="after-btn">After</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- First Line: Two images -->
+    <div class="row clearfix">
+      <div class="project-block-two col-lg-4 col-md-6 col-sm-12">
+        <div class="inner-box">
+          <div class="image">
+            <div class="juxtapose" data-startingposition="50%" data-showlabels="true" data-showcredits="false">
+              <img src="images/gallery/before2.jpg" data-label="Before">
+              <img src="images/gallery/after2.jpg" data-label="After">
             </div>
-
-            <!-- Project Block 2 -->
-            <div class="project-block-two col-lg-8 col-md-12 col-sm-12">
-                <div class="inner-box">
-                    <div class="image">
-                        <div class="beer-slider-wrapper">
-                            <div class="beer-slider" data-start="50">
-                                <img src="images/gallery/before3.jpg" alt="Before" class="beer-before">
-                                <div class="beer-reveal">
-                                    <img src="images/gallery/after3.jpg" alt="After">
-                                </div>
-                            </div>
-                            <div class="before-after-buttons">
-                                <button class="before-btn">Before</button>
-                                <button class="after-btn">After</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="before-after-buttons">
+              <button class="before-btn" onclick="this.closest('.image').querySelector('.juxtapose').style.setProperty('--slider-position','0%')">Before</button>
+              <button class="after-btn" onclick="this.closest('.image').querySelector('.juxtapose').style.setProperty('--slider-position','100%')">After</button>
             </div>
-
-            <!-- Project Block 3 -->
-            <div class="project-block-two col-lg-8 col-md-12 col-sm-12">
-                <div class="inner-box">
-                    <div class="image">
-                        <div class="beer-slider-wrapper">
-                            <div class="beer-slider" data-start="50">
-                                <img src="images/gallery/before3.jpg" alt="Before" class="beer-before">
-                                <div class="beer-reveal">
-                                    <img src="images/gallery/after3.jpg" alt="After">
-                                </div>
-                            </div>
-                            <div class="before-after-buttons">
-                                <button class="before-btn">Before</button>
-                                <button class="after-btn">After</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project Block 4 -->
-            <div class="project-block-two col-lg-4 col-md-6 col-sm-12">
-                <div class="inner-box">
-                    <div class="image">
-                        <div class="beer-slider-wrapper">
-                            <div class="beer-slider" data-start="50">
-                                <img src="images/gallery/before2.jpg" alt="Before" class="beer-before">
-                                <div class="beer-reveal">
-                                    <img src="images/gallery/after2.jpg" alt="After">
-                                </div>
-                            </div>
-                            <div class="before-after-buttons">
-                                <button class="before-btn">Before</button>
-                                <button class="after-btn">After</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project Block 5 -->
-            <div class="project-block-two col-lg-4 col-md-6 col-sm-12">
-                <div class="inner-box">
-                    <div class="image">
-                        <div class="beer-slider-wrapper">
-                            <div class="beer-slider" data-start="50">
-                                <img src="images/gallery/before2.jpg" alt="Before" class="beer-before">
-                                <div class="beer-reveal">
-                                    <img src="images/gallery/after2.jpg" alt="After">
-                                </div>
-                            </div>
-                            <div class="before-after-buttons">
-                                <button class="before-btn">Before</button>
-                                <button class="after-btn">After</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project Block 6 -->
-            <div class="project-block-two col-lg-4 col-md-6 col-sm-12">
-                <div class="inner-box">
-                    <div class="image">
-                        <div class="beer-slider-wrapper">
-                            <div class="beer-slider" data-start="50">
-                                <img src="images/gallery/before2.jpg" alt="Before" class="beer-before">
-                                <div class="beer-reveal">
-                                    <img src="images/gallery/after2.jpg" alt="After">
-                                </div>
-                            </div>
-                            <div class="before-after-buttons">
-                                <button class="before-btn">Before</button>
-                                <button class="after-btn">After</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+          </div>
         </div>
+      </div>
 
-        <!-- Button Box -->
-        <div class="button-box text-center">
-            <a href="projects.html" class="theme-btn btn-style-two clearfix">
-                <span class="btn-wrap">
-                    <span class="text-one">More Project</span>
-                    <span class="text-two">More Project</span>
-                </span>
-            </a>
+      <div class="project-block-two col-lg-8 col-md-12 col-sm-12">
+        <div class="inner-box">
+          <div class="image">
+            <div class="juxtapose" data-startingposition="50%" data-showlabels="true" data-showcredits="false">
+              <img src="images/gallery/before3.jpg" data-label="Before">
+              <img src="images/gallery/after3.jpg" data-label="After">
+            </div>
+            <div class="before-after-buttons">
+              <button class="before-btn" onclick="this.closest('.image').querySelector('.juxtapose').style.setProperty('--slider-position','0%')">Before</button>
+              <button class="after-btn" onclick="this.closest('.image').querySelector('.juxtapose').style.setProperty('--slider-position','100%')">After</button>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+
+    <!-- Second Line: Two images -->
+    <div class="row clearfix">
+      <div class="project-block-two col-lg-8 col-md-12 col-sm-12">
+        <div class="inner-box">
+          <div class="image">
+            <div class="juxtapose" data-startingposition="50%" data-showlabels="true" data-showcredits="false">
+              <img src="images/gallery/before3.jpg" data-label="Before">
+              <img src="images/gallery/after3.jpg" data-label="After">
+            </div>
+            <div class="before-after-buttons">
+              <button class="before-btn" onclick="this.closest('.image').querySelector('.juxtapose').style.setProperty('--slider-position','0%')">Before</button>
+              <button class="after-btn" onclick="this.closest('.image').querySelector('.juxtapose').style.setProperty('--slider-position','100%')">After</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-block-two col-lg-4 col-md-6 col-sm-12">
+        <div class="inner-box">
+          <div class="image">
+            <div class="juxtapose" data-startingposition="50%" data-showlabels="true" data-showcredits="false">
+              <img src="images/gallery/before2.jpg" data-label="Before">
+              <img src="images/gallery/after2.jpg" data-label="After">
+            </div>
+            <div class="before-after-buttons">
+              <button class="before-btn" onclick="this.closest('.image').querySelector('.juxtapose').style.setProperty('--slider-position','0%')">Before</button>
+              <button class="after-btn" onclick="this.closest('.image').querySelector('.juxtapose').style.setProperty('--slider-position','100%')">After</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third Line: Three images -->
+    <div class="row clearfix">
+      <div class="project-block-two col-lg-4 col-md-6 col-sm-12">
+        <div class="inner-box">
+          <div class="image">
+            <div class="juxtapose" data-startingposition="50%" data-showlabels="true" data-showcredits="false">
+              <img src="images/gallery/before2.jpg" data-label="Before">
+              <img src="images/gallery/after2.jpg" data-label="After">
+            </div>
+            <div class="before-after-buttons">
+              <button class="before-btn" onclick="this.closest('.image').querySelector('.juxtapose').style.setProperty('--slider-position','0%')">Before</button>
+              <button class="after-btn" onclick="this.closest('.image').querySelector('.juxtapose').style.setProperty('--slider-position','100%')">After</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-block-two col-lg-4 col-md-6 col-sm-12">
+        <div class="inner-box">
+          <div class="image">
+            <div class="juxtapose" data-startingposition="50%" data-showlabels="true" data-showcredits="false">
+              <img src="images/gallery/before2.jpg" data-label="Before">
+              <img src="images/gallery/after2.jpg" data-label="After">
+            </div>
+            <div class="before-after-buttons">
+              <button class="before-btn" onclick="this.closest('.image').querySelector('.juxtapose').style.setProperty('--slider-position','0%')">Before</button>
+              <button class="after-btn" onclick="this.closest('.image').querySelector('.juxtapose').style.setProperty('--slider-position','100%')">After</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-block-two col-lg-4 col-md-6 col-sm-12">
+        <div class="inner-box">
+          <div class="image">
+            <div class="juxtapose" data-startingposition="50%" data-showlabels="true" data-showcredits="false">
+              <img src="images/gallery/before2.jpg" data-label="Before">
+              <img src="images/gallery/after2.jpg" data-label="After">
+            </div>
+            <div class="before-after-buttons">
+              <button class="before-btn" onclick="this.closest('.image').querySelector('.juxtapose').style.setProperty('--slider-position','0%')">Before</button>
+              <button class="after-btn" onclick="this.closest('.image').querySelector('.juxtapose').style.setProperty('--slider-position','100%')">After</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Button Box -->
+    <div class="button-box text-center">
+      <a href="projects.html" class="theme-btn btn-style-two clearfix">
+        <span class="btn-wrap">
+          <span class="text-one">More Project</span>
+          <span class="text-two">More Project</span>
+        </span>
+      </a>
+    </div>
+  </div>
 </section>
-<!-- End Project Section Two -->
-
-<!-- End Project Section Two -->
-
-	
-
-<!-- jQuery (only one copy) -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<!-- Popper & Bootstrap -->
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-
-<!-- Plugins -->
-<script src="js/magnific-popup.min.js"></script>
-<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-<script src="js/appear.js"></script>
-<script src="js/parallax.min.js"></script>
-<script src="js/tilt.jquery.min.js"></script>
-<script src="js/jquery.paroller.min.js"></script>
-<script src="js/owl.js"></script>
-<script src="js/wow.js"></script>
-<script src="js/odometer.js"></script>
-<script src="js/mixitup.js"></script>
-<script src="js/backToTop.js"></script>
-<script src="js/cursor-script.js"></script>
-<script src="js/nav-tool.js"></script>
-<script src="js/jquery-ui.js"></script>
 
 
-
-<!-- Custom Scripts -->
-<script src="js/script.js"></script>
-<script src="js/color-settings.js"></script>
-
-
-<script src="https://unpkg.com/beerslider/dist/BeerSlider.js"></script>
-
-<script>
-window.addEventListener("load", function () {
-  document.querySelectorAll('.beer-slider-wrapper').forEach(wrapper => {
-    const slider = wrapper.querySelector('.beer-slider');
-    const reveal = slider.querySelector('.beer-reveal');
-    const btnBefore = wrapper.querySelector('.before-btn');
-    const btnAfter = wrapper.querySelector('.after-btn');
-
-    if (!slider || !reveal) return;
-
-    // Ensure images are loaded before initializing
-    const imgs = slider.querySelectorAll('img');
-    let loaded = 0;
-    imgs.forEach(img => {
-      if (img.complete) loaded++;
-      else img.onload = () => { loaded++; if (loaded === imgs.length) new BeerSlider(slider, { start: 50 }); }
-    });
-    if (loaded === imgs.length) new BeerSlider(slider, { start: 50 });
-
-    // Buttons
-    btnBefore.addEventListener('click', () => reveal.style.width = '0%');
-    btnAfter.addEventListener('click', () => reveal.style.width = '100%');
-  });
-});
-</script>
-<!--<script>
-$(window).on('load', function () {
-
-  
-  const $carousel = $('.three-item-carousel');
-
-  if (!$carousel.hasClass('owl-loaded')) {
-    $carousel.owlCarousel({
-      loop: true,
-      margin: 30,
-      nav: true,
-      dots: false,
-
-      autoplay: false,
-
-      mouseDrag: false,
-      touchDrag: false,
-      pullDrag: false,
-      freeDrag: false,
-
-      smartSpeed: 700,
-
-      responsive: {
-        0: { items: 1 },
-        600: { items: 2 },
-        1000: { items: 3 }
-      }
-    });
-  }
-
-  /* HARD STOP autoplay */
-  $carousel.trigger('stop.owl.autoplay');
-  const owl = $carousel.data('owl.carousel');
-  if (owl) {
-    owl.settings.autoplay = false;
-    owl.options.autoplay = false;
-  }
-
-  /* =====================================
-     BEERSLIDER – BUTTONS ONLY
-  ===================================== */
-  document.querySelectorAll('.beer-slider-wrapper').forEach(wrapper => {
-
-    const slider = wrapper.querySelector('.beer-slider');
-    const reveal = slider.querySelector('.beer-reveal');
-
-    /* Init BeerSlider */
-    new BeerSlider(slider, { start: 50 });
-
-    /* Disable ALL interaction on slider */
-    slider.style.pointerEvents = 'none';
-
-    /* Smooth animation */
-    reveal.style.transition = 'width 0.8s ease';
-    reveal.style.width = '50%';
-
-    const btnBefore = wrapper.querySelector('.btn-before');
-    const btnAfter  = wrapper.querySelector('.btn-after');
-
-    btnBefore.addEventListener('click', function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      reveal.style.width = '100%';
-    });
-
-    btnAfter.addEventListener('click', function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      reveal.style.width = '0%';
-    });
-  });
-
-});
-
-/* =====================================
-   HARD BLOCK TOUCH / DRAG EVENTS
-===================================== */
-document.querySelectorAll('.project-section-five').forEach(section => {
-
-  /* Touch */
-  section.addEventListener('touchstart', e => e.preventDefault(), { passive: false });
-  section.addEventListener('touchmove',  e => e.preventDefault(), { passive: false });
-  section.addEventListener('touchend',   e => e.preventDefault(), { passive: false });
-
-  /* Mouse drag */
-  section.addEventListener('mousedown', e => e.preventDefault());
-  section.addEventListener('mousemove', e => e.preventDefault());
-
-});
-
-/* =====================================
-   REMOVE OVERLAYS & HOVER EFFECTS
-===================================== */
-document.querySelectorAll('.project-section-five .overlay-box').forEach(el => {
-  el.style.display = 'none';
-});
-
-document.querySelectorAll('.project-section-five').forEach(section => {
-  section.addEventListener('touchstart', e => e.preventDefault(), { passive: false });
-  section.addEventListener('touchmove',  e => e.preventDefault(), { passive: false });
-});
-document.querySelectorAll('.project-section-five').forEach(section => {
-  section.addEventListener('touchstart', e => e.preventDefault(), { passive: false });
-  section.addEventListener('touchmove',  e => e.preventDefault(), { passive: false });
-});
-
-</script>-->
-
-
-<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
-<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+<!-- Juxtapose JS -->
+<script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
 
 </body>
 </html>
