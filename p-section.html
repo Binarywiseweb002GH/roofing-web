@@ -167,6 +167,36 @@
   </div>
 </section>
 
+<script>
+// Override Juxtapose auto-snapping
+document.addEventListener("DOMContentLoaded", function() {
+  const sliders = document.querySelectorAll(".juxtapose");
+  sliders.forEach(slider => {
+    // Remove auto snapping on drag
+    slider.addEventListener("mousedown", function(e){
+      const handle = slider.querySelector(".jx-slider-handle");
+      handle.style.transition = "none"; // stop smooth snap
+    });
+    slider.addEventListener("mouseup", function(e){
+      const handle = slider.querySelector(".jx-slider-handle");
+      handle.style.transition = "none"; // stop auto jump
+    });
+
+    // Optional: stop click buttons from snapping
+    const beforeBtn = slider.closest(".image").querySelector(".before-btn");
+    const afterBtn = slider.closest(".image").querySelector(".after-btn");
+
+    beforeBtn?.addEventListener("click", () => {
+      slider.style.setProperty('--slider-position','0%');
+    });
+
+    afterBtn?.addEventListener("click", () => {
+      slider.style.setProperty('--slider-position','100%');
+    });
+  });
+});
+</script>
+
 
 <!-- Juxtapose JS -->
 <script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>

@@ -1020,6 +1020,55 @@ document.querySelectorAll('.juxtapose').forEach(function(slider) {
   slider.ontouchmove = null;
 });
 </script>
+<script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const sliders = document.querySelectorAll(".juxtapose");
+
+  sliders.forEach(slider => {
+    // Initialize each slider
+    const images = slider.querySelectorAll("img");
+    if (images.length < 2) return;
+
+    new juxtapose.JXSlider(slider, {
+      startingPosition: "50%",
+      showLabels: true,
+      showCredits: false,
+      animate: false // IMPORTANT: stop auto animation
+    });
+
+    // Remove Juxtapose internal mousemove/touchmove
+    slider.onmousemove = null;
+    slider.ontouchmove = null;
+
+    const handle = slider.querySelector(".jx-slider-handle");
+    const mask = slider.querySelector(".jx-slider-mask");
+
+    // Click anywhere on the slider to move handle
+    slider.addEventListener('click', e => {
+      const rect = slider.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const percent = (x / rect.width) * 100;
+      handle.style.left = percent + '%';
+      mask.style.width = percent + '%';
+    });
+
+    // Before/After buttons
+    const beforeBtn = slider.closest(".image").querySelector(".before-btn");
+    const afterBtn = slider.closest(".image").querySelector(".after-btn");
+
+    beforeBtn?.addEventListener("click", () => {
+      handle.style.left = "0%";
+      mask.style.width = "0%";
+    });
+
+    afterBtn?.addEventListener("click", () => {
+      handle.style.left = "100%";
+      mask.style.width = "100%";
+    });
+  });
+});
+</script>
 
 
 <!--<script>

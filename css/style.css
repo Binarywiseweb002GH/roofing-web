@@ -11215,18 +11215,23 @@
 /* ------------------------------ */
 /* Remove Juxtapose credit text */
 /* ------------------------------ */
+/* ========================= */
+/* Hide Juxtapose branding/credits */
+/* ========================= */
 .jx-credit,
 .jx-knightlab {
   display: none !important;
+  font-family: inherit !important;
 }
 
-/* ------------------------------ */
+/* ========================= */
 /* Page container spacing */
-/* ------------------------------ */
+/* ========================= */
 .project-section-two .auto-container {
   padding-left: 15px;
   padding-right: 15px;
 }
+
 @media (min-width: 1200px) {
   .project-section-two .auto-container {
     padding-left: 40px;
@@ -11234,30 +11239,31 @@
   }
 }
 
-/* ------------------------------ */
+/* ========================= */
 /* Section padding and image spacing */
-/* ------------------------------ */
+/* ========================= */
 .project-section-two {
   padding: 80px 0;
 }
 
 .project-block-two .image {
   margin-bottom: 30px;
-  padding: 0 !important; /* remove inner padding */
+  padding: 0 !important;        /* remove inner padding */
   overflow: visible !important; /* allow handle to reach edges */
 }
 
-/* ------------------------------ */
+/* ========================= */
 /* Juxtapose container full width */
-/* ------------------------------ */
+/* ========================= */
 .juxtapose {
   width: 100% !important;
   overflow: visible !important;
+  position: relative;
 }
 
-/* ------------------------------ */
+/* ========================= */
 /* Remove Juxtapose dark overlay and prevent auto jump */
-/* ------------------------------ */
+/* ========================= */
 .juxtapose .jx-slider-mask {
   background: transparent !important;  /* remove dark mask */
   left: 0 !important;                  /* allow full left */
@@ -11265,9 +11271,9 @@
   transition: none !important;         /* prevent auto snap */
 }
 
-/* ------------------------------ */
+/* ========================= */
 /* Images crisp, full color, no filter */
-/* ------------------------------ */
+/* ========================= */
 .juxtapose img {
   width: 100%;
   height: auto;
@@ -11275,18 +11281,23 @@
   image-rendering: auto;
   filter: none !important;
   transition: none !important;
+  display: block;
+  user-select: none; /* prevent selection while dragging */
 }
 
-/* ------------------------------ */
+/* ========================= */
 /* Slider handle styling */
-/* ------------------------------ */
+/* ========================= */
 .juxtapose .jx-slider-handle {
+  width: 40px !important;
+  height: 40px !important;
   background-color: #fff !important; /* handle color */
-  border: 2px solid #000;           /* handle border */
+  border: 2px solid #000 !important; /* handle border */
+  border-radius: 50% !important;
   box-shadow: 0 0 5px rgba(0,0,0,0.2);
-  cursor: grab;
+  cursor: grab !important;
   transition: none !important;       /* prevent jump on click */
-  left: 0 !important;                /* initial full left */
+  z-index: 10;
 }
 
 /* Handle on hover */
@@ -11294,25 +11305,30 @@
   background-color: #f1f1f1 !important;
 }
 
-/* ------------------------------ */
-/* Remove Knightlab branding fonts (just in case) */
-/* ------------------------------ */
-.jx-knightlab {
-  font-family: inherit !important;
+/* ========================= */
+/* Prevent touch auto-snap on mobile */
+/* ========================= */
+.juxtapose .jx-slider {
+  touch-action: pan-x;
 }
 
-/* ------------------------------ */
-/* Optional: responsive image adjustments */
-/* ------------------------------ */
+/* ========================= */
+/* Optional: responsive adjustments */
+/* ========================= */
 @media (max-width: 767px) {
   .juxtapose {
     height: auto;
   }
+
+  .juxtapose .jx-slider-handle {
+    width: 30px !important;
+    height: 30px !important;
+  }
 }
 
-/* ------------------------------ */
-/* Optional: prevent image blur while dragging */
-/* ------------------------------ */
+/* ========================= */
+/* Prevent image blur while dragging */
+/* ========================= */
 .juxtapose .jx-slider-mask img {
   image-rendering: auto !important;
 }
