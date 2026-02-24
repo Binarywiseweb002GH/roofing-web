@@ -576,117 +576,97 @@
       </div>
     </div>
 
-        <!-- Second Line: Two images (same as first line layout) -->
-        <div class="row clearfix">
-            <div class="project-block-two col-lg-8 col-md-12 col-sm-12">
-                <div class="inner-box">
-                    <div class="image">
-                        <div class="beer-slider-wrapper">
-                            <div class="beer-slider" data-start="50">
-                                <img src="images/gallery/before3.jpg" alt="Before" class="beer-before">
-                                <div class="beer-reveal">
-                                    <img src="images/gallery/after3.jpg" alt="After">
-                                </div>
-                            </div>
-                            <div class="before-after-buttons">
-                                <button class="before-btn">Before</button>
-                                <button class="after-btn">After</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+         <!-- Second Line: Two images -->
+    <div class="row clearfix">
+      <div class="project-block-two col-lg-8 col-md-12 col-sm-12">
+        <div class="inner-box">
+          <div class="image">
+            <div class="juxtapose" data-startingposition="50%" data-showlabels="true" data-showcredits="false">
+              <img src="images/gallery/before3.jpg" data-label="Before">
+              <img src="images/gallery/after3.jpg" data-label="After">
             </div>
-            <div class="project-block-two col-lg-4 col-md-6 col-sm-12">
-                <div class="inner-box">
-                    <div class="image">
-                        <div class="beer-slider-wrapper">
-                            <div class="beer-slider" data-start="50">
-                                <img src="images/gallery/before2.jpg" alt="Before" class="beer-before">
-                                <div class="beer-reveal">
-                                    <img src="images/gallery/after2.jpg" alt="After">
-                                </div>
-                            </div>
-                            <div class="before-after-buttons">
-                                <button class="before-btn">Before</button>
-                                <button class="after-btn">After</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="before-after-buttons">
+              <button class="before-btn" onclick="this.closest('.image').querySelector('.juxtapose').style.setProperty('--slider-position','0%')">Before</button>
+              <button class="after-btn" onclick="this.closest('.image').querySelector('.juxtapose').style.setProperty('--slider-position','100%')">After</button>
             </div>
+          </div>
         </div>
+      </div>
+
+             <div class="project-block-two col-lg-4 col-md-6 col-sm-12">
+        <div class="inner-box">
+          <div class="image">
+            <div class="juxtapose" data-startingposition="50%" data-showlabels="true" data-showcredits="false">
+              <img src="images/gallery/before2.jpg" data-label="Before">
+              <img src="images/gallery/after2.jpg" data-label="After">
+            </div>
+            <div class="before-after-buttons">
+              <button class="before-btn" onclick="this.closest('.image').querySelector('.juxtapose').style.setProperty('--slider-position','0%')">Before</button>
+              <button class="after-btn" onclick="this.closest('.image').querySelector('.juxtapose').style.setProperty('--slider-position','100%')">After</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
         <!-- Third Line: Three images -->
         <div class="row clearfix">
-            <div class="project-block-two col-lg-4 col-md-6 col-sm-12">
-                <div class="inner-box">
-                    <div class="image">
-                        <div class="beer-slider-wrapper">
-                            <div class="beer-slider" data-start="50">
-                                <img src="images/gallery/before2.jpg" alt="Before" class="beer-before">
-                                <div class="beer-reveal">
-                                    <img src="images/gallery/after2.jpg" alt="After">
-                                </div>
-                            </div>
-                            <div class="before-after-buttons">
-                                <button class="before-btn">Before</button>
-                                <button class="after-btn">After</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <div class="project-block-two col-lg-4 col-md-6 col-sm-12">
+        <div class="inner-box">
+          <div class="image">
+            <div class="juxtapose" data-startingposition="50%" data-showlabels="true" data-showcredits="false">
+              <img src="images/gallery/before2.jpg" data-label="Before">
+              <img src="images/gallery/after2.jpg" data-label="After">
             </div>
-            <div class="project-block-two col-lg-4 col-md-6 col-sm-12">
-                <div class="inner-box">
-                    <div class="image">
-                        <div class="beer-slider-wrapper">
-                            <div class="beer-slider" data-start="50">
-                                <img src="images/gallery/before2.jpg" alt="Before" class="beer-before">
-                                <div class="beer-reveal">
-                                    <img src="images/gallery/after2.jpg" alt="After">
-                                </div>
-                            </div>
-                            <div class="before-after-buttons">
-                                <button class="before-btn">Before</button>
-                                <button class="after-btn">After</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="before-after-buttons">
+              <button class="before-btn" onclick="this.closest('.image').querySelector('.juxtapose').style.setProperty('--slider-position','0%')">Before</button>
+              <button class="after-btn" onclick="this.closest('.image').querySelector('.juxtapose').style.setProperty('--slider-position','100%')">After</button>
             </div>
-            <div class="project-block-two col-lg-4 col-md-6 col-sm-12">
-                <div class="inner-box">
-                    <div class="image">
-                        <div class="beer-slider-wrapper">
-                            <div class="beer-slider" data-start="50">
-                                <img src="images/gallery/before2.jpg" alt="Before" class="beer-before">
-                                <div class="beer-reveal">
-                                    <img src="images/gallery/after2.jpg" alt="After">
-                                </div>
-                            </div>
-                            <div class="before-after-buttons">
-                                <button class="before-btn">Before</button>
-                                <button class="after-btn">After</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
 
-        <!-- Fourth Line: Single image -->
-       
-
-        <!-- Button Box -->
-        <div class="button-box text-center">
-            <a href="projects.html" class="theme-btn btn-style-two clearfix">
-                <span class="btn-wrap">
-                    <span class="text-one">More Project</span>
-                    <span class="text-two">More Project</span>
-                </span>
-            </a>
+           <div class="project-block-two col-lg-4 col-md-6 col-sm-12">
+        <div class="inner-box">
+          <div class="image">
+            <div class="juxtapose" data-startingposition="50%" data-showlabels="true" data-showcredits="false">
+              <img src="images/gallery/before2.jpg" data-label="Before">
+              <img src="images/gallery/after2.jpg" data-label="After">
+            </div>
+            <div class="before-after-buttons">
+              <button class="before-btn" onclick="this.closest('.image').querySelector('.juxtapose').style.setProperty('--slider-position','0%')">Before</button>
+              <button class="after-btn" onclick="this.closest('.image').querySelector('.juxtapose').style.setProperty('--slider-position','100%')">After</button>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <div class="project-block-two col-lg-4 col-md-6 col-sm-12">
+        <div class="inner-box">
+          <div class="image">
+            <div class="juxtapose" data-startingposition="50%" data-showlabels="true" data-showcredits="false">
+              <img src="images/gallery/before2.jpg" data-label="Before">
+              <img src="images/gallery/after2.jpg" data-label="After">
+            </div>
+            <div class="before-after-buttons">
+              <button class="before-btn" onclick="this.closest('.image').querySelector('.juxtapose').style.setProperty('--slider-position','0%')">Before</button>
+              <button class="after-btn" onclick="this.closest('.image').querySelector('.juxtapose').style.setProperty('--slider-position','100%')">After</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- Button Box -->
+    <div class="button-box text-center">
+      <a href="projects.html" class="theme-btn btn-style-two clearfix">
+        <span class="btn-wrap">
+          <span class="text-one">More Project</span>
+          <span class="text-two">More Project</span>
+        </span>
+      </a>
+    </div>
+  </div>
 </section>
 
 	
