@@ -406,7 +406,7 @@ window.addEventListener("load", function () {
 
     if (!slider || !reveal) return;
 
-    // Initialize BeerSlider after images load
+    // Ensure images are loaded before initializing
     const imgs = slider.querySelectorAll('img');
     let loaded = 0;
     imgs.forEach(img => {
@@ -415,18 +415,9 @@ window.addEventListener("load", function () {
     });
     if (loaded === imgs.length) new BeerSlider(slider, { start: 50 });
 
-    // Smooth transition for mobile
-    reveal.style.transition = 'width 0.5s ease';
-
-    // Buttons fix for iOS
-    btnBefore.addEventListener('click', () => {
-      reveal.style.width = '0%';
-      setTimeout(() => { new BeerSlider(slider, { start: 0 }); }, 50); // force update
-    });
-    btnAfter.addEventListener('click', () => {
-      reveal.style.width = '100%';
-      setTimeout(() => { new BeerSlider(slider, { start: 100 }); }, 50); // force update
-    });
+    // Buttons
+    btnBefore.addEventListener('click', () => reveal.style.width = '0%');
+    btnAfter.addEventListener('click', () => reveal.style.width = '100%');
   });
 });
 </script>
